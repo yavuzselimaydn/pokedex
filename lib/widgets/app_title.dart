@@ -12,7 +12,7 @@ class AppTitle extends StatelessWidget {
       height: UIHelper.appTitleHeight(),
       child: Stack(
         children: [
-          Padding(               //EdgeInsets.all(8.w),  mainde verdigim genislige gore oranla yada ekran diket mi yatay mi ona gore de 
+          Padding(       //EdgeInsets.all(8.w),  mainde verdigim genislige gore oranla yada ekran diket mi yatay mi ona gore de 
             padding: UIHelper.defaultPadding(), 
             child: Align(
               alignment: Alignment.centerLeft,

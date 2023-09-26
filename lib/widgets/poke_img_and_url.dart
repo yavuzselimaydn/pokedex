@@ -12,6 +12,7 @@ class PokeImgAndUrl extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
+
         Align(
           alignment: Alignment.bottomRight,
           child: Image.asset(
@@ -21,6 +22,7 @@ class PokeImgAndUrl extends StatelessWidget {
             fit: BoxFit.fitHeight,
           ),
         ),
+        
         Align(
           alignment: Alignment.bottomRight,
           child: CachedNetworkImage(

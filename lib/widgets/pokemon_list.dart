@@ -26,6 +26,7 @@ class _PokemonListState extends State<PokemonList> {
     return FutureBuilder<List<PokemonModel>>( //oritation builder da oritation degistiginde builderı tekllıyo yanı zor tasarımda kullan
       future: _pokemonList,
       builder: (context, snapshot) {
+
         if (snapshot.hasData) {
           List<PokemonModel> _list = snapshot.data!;
           debugPrint("grid view caalıstı");
@@ -40,11 +41,15 @@ class _PokemonListState extends State<PokemonList> {
               return PokemonListItem(pokemon: oankiEleman);
             },
           );
-        } else if (snapshot.hasError) {
+        } 
+        
+        else if (snapshot.hasError) {
           return const Center(
             child: Text("Hata Geldi"),
           );
-        } else {
+        } 
+
+        else {
           return const Center(
             child: CircularProgressIndicator(),
           );

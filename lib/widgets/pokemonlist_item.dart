@@ -25,15 +25,18 @@ class PokemonListItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+
           Text(
             pokemon.name ?? "N/A",
             style: Constants.pokeNameStyle(),
           ),
+
           Chip(
               label: Text(
             pokemon.type![0],
             style: Constants.pokeTypeStyle(),
           )),
+          
           Expanded(child: PokeImgAndUrl(pokemon: pokemon)) //resım sıgsın dıye expanded
         ]),
       ),

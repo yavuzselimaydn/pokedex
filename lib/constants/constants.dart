@@ -41,5 +41,20 @@ class Constants{
     }
   }
 
+  static TextStyle infoLabelTextStyle() {
+    return TextStyle(
+      fontSize: calculateFontSize(20),
+      fontWeight: FontWeight.bold,
+      color: Colors.black
+    );
+  }
+
+  static TextStyle infoTextStyle() {
+    return TextStyle(
+      fontSize: calculateFontSize(18),
+      color: Colors.black
+    );
+  }
+
 
 }

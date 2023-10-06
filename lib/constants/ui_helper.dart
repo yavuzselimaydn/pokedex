@@ -46,4 +46,9 @@ class UIHelper{
     }
   }
 
+  static double iconSize(){
+    return ScreenUtil().orientation == Orientation.portrait 
+      ? 24.h 
+      : 16.w;
+  }
 }

@@ -15,12 +15,14 @@ class PokeTypeName extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                pokemon.name ?? "",
-                style: Constants.pokeNameStyle(),
+              Expanded(
+                child: Text(
+                  pokemon.name ?? "",
+                  style: Constants.pokeNameStyle(),
+                ),
               ),
+
               Text("#${pokemon.num}", style: Constants.pokeNameStyle())
             ],
           ),

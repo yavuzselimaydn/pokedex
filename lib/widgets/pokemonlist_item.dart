@@ -46,7 +46,7 @@ class PokemonListItem extends StatelessWidget {
               style: Constants.pokeTypeStyle(),
             )),
             
-            Expanded(child: PokeImgAndUrl(pokemon: pokemon)) //resım sıgsın dıye expanded
+            Expanded(child: PokeImgAndLogo(pokemon: pokemon)) //resım sıgsın dıye expanded
           ]),
         ),
       ),

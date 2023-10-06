@@ -4,9 +4,9 @@ import 'package:pokedex/constants/constants.dart';
 import 'package:pokedex/constants/ui_helper.dart';
 import 'package:pokedex/model/pokemon_model.dart';
 
-class PokeImgAndUrl extends StatelessWidget {
+class PokeImgAndLogo extends StatelessWidget {
   final PokemonModel pokemon;
-  const PokeImgAndUrl({required this.pokemon, super.key});
+  const PokeImgAndLogo({required this.pokemon, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +26,8 @@ class PokeImgAndUrl extends StatelessWidget {
         Align(
           alignment: Alignment.bottomRight,
           child: CachedNetworkImage(
-            errorWidget: (context, url, error) => Image.asset(Constants.logoUrl),
-            imageUrl: pokemon.img ?? "", //kutup sayesinde netten gelen imgler cachede saklanır her seferınde int e cıkmam gerekmez
+            errorWidget: (context, url, error) => Image.asset(Constants.logoUrl), //resım gelmezse 
+            imageUrl: pokemon.img ?? "", //kutuphane sayesinde netten gelen imgler cachede saklanır her seferınde int e cıkmam gerekmez
             width: UIHelper.calculatePokeImgAndBallSize(),
             height: UIHelper.calculatePokeImgAndBallSize(),
             fit: BoxFit.fitHeight,

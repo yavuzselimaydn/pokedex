@@ -34,5 +34,4 @@ class DetailPage extends StatelessWidget {
       ),
     );
   }
-} if.(elfe)
-yavuz selim > aydın>
+}

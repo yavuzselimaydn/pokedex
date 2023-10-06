@@ -28,7 +28,7 @@ class _PokemonListState extends State<PokemonList> {
       builder: (context, snapshot) {
 
         if (snapshot.hasData) {
-          List<PokemonModel> _list = snapshot.data!;
+          List<PokemonModel> _list = snapshot.data!; //snapshot tan veriyi cıkardım
           debugPrint("grid view caalıstı");
           return GridView.builder(
             itemCount: _list.length,

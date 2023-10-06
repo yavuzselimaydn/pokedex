@@ -13,12 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(412, 732), //tasarımı yaptıgım cihazın boyutlaru
+      designSize: const Size(412, 732), //tasarımı yaptıgım cihazın boyutlari
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Pokedex',
         theme: ThemeData.dark().
-          copyWith(   //copy with yani darkın tum ozellıklerini alır degısmek istedigimi ıcıne yazarum mesela text theme
+          copyWith(   //copy with yani darkın tum ozellıklerini alır degısmek istedigimi ıcıne yazarim mesela text theme
             textTheme: GoogleFonts.latoTextTheme()
           ),
         home: const HomePage(),

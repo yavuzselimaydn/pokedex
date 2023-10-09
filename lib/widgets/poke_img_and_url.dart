@@ -25,14 +25,17 @@ class PokeImgAndLogo extends StatelessWidget {
         
         Align(
           alignment: Alignment.bottomRight,
-          child: CachedNetworkImage(
-            errorWidget: (context, url, error) => Image.asset(Constants.logoUrl), //resım gelmezse 
-            imageUrl: pokemon.img ?? "", //kutuphane sayesinde netten gelen imgler cachede saklanır her seferınde int e cıkmam gerekmez
-            width: UIHelper.calculatePokeImgAndBallSize(),
-            height: UIHelper.calculatePokeImgAndBallSize(),
-            fit: BoxFit.fitHeight,
-            placeholder: (context, url) => const CircularProgressIndicator( //resim inten gelene kasdar  gostercegım  ımg
-              color: Colors.white,
+          child: Hero(
+            tag: pokemon.id!,
+            child: CachedNetworkImage(
+              errorWidget: (context, url, error) => Image.asset(Constants.logoUrl), //resım gelmezse 
+              imageUrl: pokemon.img ?? "", //kutuphane sayesinde netten gelen imgler cachede saklanır her seferınde int e cıkmam gerekmez
+              width: UIHelper.calculatePokeImgAndBallSize(),
+              height: UIHelper.calculatePokeImgAndBallSize(),
+              fit: BoxFit.fitHeight,
+              placeholder: (context, url) => const CircularProgressIndicator( //resim inten gelene kasdar  gostercegım  ımg
+                color: Colors.white,
+              ),
             ),
           ),
         ), 

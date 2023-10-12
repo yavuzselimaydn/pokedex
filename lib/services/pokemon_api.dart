@@ -11,7 +11,7 @@ class PokeApi{
 
     var response = await Dio().get(_url);                 //url sonunda .json var yani datayı striing olarak okucak, jsonDecode lazım
 
-    var pokeList = jsonDecode(response.data)["pokemon"];  //string olarak geldigi icin jsona cevirdim, listede pokemon keyinde 
+    var pokeList = jsonDecode(response.data)["pokemon"];  //string olarak geldigi icin jsona cevirdim, listede pokemon keyinden veriyi aldım
 
     if(pokeList is List){                                 //is ile pokelist in turu listemi kontrol eettıtom
       list = pokeList.map(

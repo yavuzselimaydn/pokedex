@@ -3,6 +3,7 @@
 //
 //     final pokemonModel = pokemonModelFromJson(jsonString);
 
+//  quick typeden aldıgım kodlar
 import 'dart:convert';
 
 PokemonModel pokemonModelFromJson(String str) => PokemonModel.fromJson(json.decode(str));

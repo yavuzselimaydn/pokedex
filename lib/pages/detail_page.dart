@@ -18,7 +18,7 @@ class DetailPage extends StatelessWidget {
         : _buildLanscapeBody(context);
   }
 
-  Scaffold _buildLanscapeBody(BuildContext context) {
+  Scaffold _buildLanscapeBody(BuildContext context) { //yatay modda tasarım
     return Scaffold(
       backgroundColor: UIHelper.getColorFromType(pokemon.type![0]),
       body: SafeArea(
@@ -38,23 +38,26 @@ class DetailPage extends StatelessWidget {
           Expanded(
             child: Row(
               children: [
+                //ilk sutun
                 Expanded(
                   flex: 2,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       PokeTypeName(pokemon: pokemon),
+
                       Hero(
                         tag: pokemon.id!,
                         child: CachedNetworkImage(
                           imageUrl: pokemon.img ?? "",
-                          height: 0.30.sw,
+                          height: 0.20.sw,
                           fit: BoxFit.fitHeight,
                         ),
                       ),
                     ],
                   ),
                 ),
+                //ıkıncı sutun
                 Expanded(flex: 3, child: Padding(
                   padding: UIHelper.defaultPadding(),
                   child: PokeInformation(pokemon: pokemon),
@@ -67,30 +70,32 @@ class DetailPage extends StatelessWidget {
     );
   }
 
-  Scaffold _buildPortraitBody(BuildContext context) {
+  Scaffold _buildPortraitBody(BuildContext context) { //dikey mod tasarımı
     return Scaffold(
       backgroundColor: UIHelper.getColorFromType(pokemon.type![0]),
-      body: SafeArea(
-        //otomatik olarak sayfayı bildirim panelinin altında baslatır
+      body: SafeArea(    //otomatik olarak sayfayı bildirim panelinin altında baslatır
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             IconButton(
               padding: UIHelper.defaultPadding(),
-              iconSize: UIHelper
-                  .iconSize(), //24.w, dikeyde genislik 360 ken , yatayda genislik 720 oldugu icin yatay modda icon size buyudu
+              iconSize: UIHelper.iconSize(), //24.w, dikeyde genislik 360 ken , yatayda genislik 720 oldugu icin yatay modda icon size buyudu
               onPressed: () {
                 Navigator.pop(context);
               },
               icon: const Icon(Icons.arrow_back_ios),
             ),
+
             PokeTypeName(pokemon: pokemon),
+
             SizedBox(
               height: 20.h,
             ),
+
             Expanded(
               child: Stack(
                 children: [
+                  
                   Positioned(
                     top: 0,
                     right: 0,
@@ -100,6 +105,7 @@ class DetailPage extends StatelessWidget {
                       fit: BoxFit.fitHeight,
                     ),
                   ),
+
                   Positioned(
                     bottom: 0,
                     right: 0,
@@ -107,9 +113,10 @@ class DetailPage extends StatelessWidget {
                     top: 0.12.sh,
                     child: PokeInformation(pokemon: pokemon),
                   ),
+
                   Align(
                     alignment: Alignment.topCenter,
-                    child: Hero(
+                    child: Hero( //animasyon icin
                       tag: pokemon.id!,
                       child: CachedNetworkImage(
                         imageUrl: pokemon.img ?? "",

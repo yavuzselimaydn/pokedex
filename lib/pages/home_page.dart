@@ -8,12 +8,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: OrientationBuilder(       //orientation degisikliginde buildi tetikler
+      body: OrientationBuilder(       //orientation degisikliginde buildi tetiklemesi icin sarmaladdım.
         builder: (context, orientation) {
           return const Column(
             children: [
               AppTitle(),
-              Expanded(child: PokemonList()),
+              Expanded(child: PokemonList()), //scroll oldugu icın hatayı onlemek adına expanded
             ],
           );
         },

@@ -13,7 +13,7 @@ class PokeImgAndLogo extends StatelessWidget {
     return Stack(
       children: [
 
-        Align(
+        Align(   //stackde ilk eleman altta olur,digerleri ustune gelir
           alignment: Alignment.bottomRight,
           child: Image.asset(
             Constants.logoUrl,
@@ -27,9 +27,9 @@ class PokeImgAndLogo extends StatelessWidget {
           alignment: Alignment.bottomRight,
           child: Hero(
             tag: pokemon.id!,
-            child: CachedNetworkImage(
+            child: CachedNetworkImage(    //kutuphane sayesinde netten gelen imgler cachede saklanır her seferınde int e cıkmam gerekmez
               errorWidget: (context, url, error) => Image.asset(Constants.logoUrl), //resım gelmezse 
-              imageUrl: pokemon.img ?? "", //kutuphane sayesinde netten gelen imgler cachede saklanır her seferınde int e cıkmam gerekmez
+              imageUrl: pokemon.img ?? "", 
               width: UIHelper.calculatePokeImgAndBallSize(),
               height: UIHelper.calculatePokeImgAndBallSize(),
               fit: BoxFit.fitHeight,

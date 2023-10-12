@@ -32,9 +32,9 @@ class Constants{
     );
   }
   
-  static calculateFontSize(int size){
+  static calculateFontSize(int size){ // telefonun kendi font size artınca uygulamanın fontsizenin artmasını saglar .sp ile
     if(ScreenUtil().orientation == Orientation.portrait){
-      return size.sp; // .sp telefonun kendi font buyuklugune gorede oranlar size ı
+      return size.sp;                // .sp telefonun kendi font buyuklugune gorede oranlar size ı
     }
     else{
       return (size*0.7).sp;
@@ -42,6 +42,13 @@ class Constants{
   }
 
   static TextStyle infoLabelTextStyle() {
+    return TextStyle(
+      fontSize: calculateFontSize(15),
+      fontWeight: FontWeight.bold,
+      color: Colors.black
+    );
+  }
+  static TextStyle infoLabelTextStylePortrait() {
     return TextStyle(
       fontSize: calculateFontSize(20),
       fontWeight: FontWeight.bold,

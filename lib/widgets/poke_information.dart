@@ -37,11 +37,13 @@ class PokeInformation extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(label,style: Constants.infoLabelTextStyle(),),
+        Text(label,style:ScreenUtil().orientation == Orientation.portrait ?Constants.infoLabelTextStylePortrait() : Constants.infoLabelTextStyle(),),
+
         if(value is List && value.isNotEmpty) 
           Text(value.join(" , "),style: Constants.infoTextStyle(),) // listeleri ekler birbirine ve stirng yapar
         else if(value.isEmpty)
-          Text("Not Available",style: Constants.infoTextStyle(),)
+          Text("Not Available",style: Constants.infoTextStyle(),textAlign: TextAlign.end,)
+          
         else  
           Text(value.toString(),style: Constants.infoTextStyle(),)
       ],

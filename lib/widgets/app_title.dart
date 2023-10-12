@@ -13,9 +13,9 @@ class AppTitle extends StatelessWidget {
       child: Stack(
         children: [
 
-          Padding(       //EdgeInsets.all(8.w),  mainde verdigim genislige gore oranla yada ekran diket mi yatay mi ona gore de 
+          Padding(    //EdgeInsets.all(8.w),  mainde verdigim genislige gore oranla yada ekran diket mi yatay mi ona gore de 
             padding: UIHelper.defaultPadding(), 
-            child: Align(
+            child: Align( //stack yapısında konumlandırma icın kullanılır
               alignment: Alignment.centerLeft,
               child: Text(
                 Constants.title,

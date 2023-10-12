@@ -6,7 +6,7 @@ class UIHelper{
   UIHelper._();
 
   static double appTitleHeight(){
-    return ScreenUtil().orientation == Orientation.portrait //ekran dikey modda ise
+    return ScreenUtil().orientation == Orientation.portrait 
       ? 0.15.sh  // ekran dikey ise ekran yuksekliginin yuzde 15 ni, yukseklik yap
       : 0.15.sw;  // ekran yatay ise ekran genisliginin yuzde 15 ni, yukseklik yap
   }

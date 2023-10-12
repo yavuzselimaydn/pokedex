@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
+    return ScreenUtilInit(              // material appı sarmaladım screenutil ile
       designSize: const Size(412, 732), //tasarımı yaptıgım cihazın boyutlari
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,

@@ -29,7 +29,7 @@ class PokeTypeName extends StatelessWidget {
           SizedBox(height: 0.02.sh,),
           Chip(
             label: Text(
-              pokemon.type?.join(" , ") ?? "",
+              pokemon.type?.join(" , ") ?? "", // .join ile listedeki elemanları birlestırırım
               style: Constants.pokeTypeStyle(),
             ),
           )

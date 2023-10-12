@@ -12,19 +12,20 @@ class PokemonList extends StatefulWidget {
 }
 
 class _PokemonListState extends State<PokemonList> {
+
   late final Future<List<PokemonModel>> _pokemonList;
 
   @override
   void initState() {
     super.initState();
-    _pokemonList = PokeApi.getPokemonData();
+    _pokemonList = PokeApi.getPokemonData(); //her degısıklıkde data cekmesın dıye ınıtstate datayı cekıyorum
   }
 
   @override
   Widget build(BuildContext context) {
     debugPrint("build calıstı"); //orientation degistiginde build zaten tetikleniyor.
     return FutureBuilder<List<PokemonModel>>( //oritation builder da oritation degistiginde builderı tekllıyo yanı zor tasarımda kullan
-      future: _pokemonList,
+      future: _pokemonList, //veri
       builder: (context, snapshot) {
 
         if (snapshot.hasData) {

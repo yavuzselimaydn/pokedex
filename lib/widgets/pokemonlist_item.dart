@@ -34,7 +34,6 @@ class PokemonListItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-    
             Text(
               pokemon.name ?? "N/A",
               style: Constants.pokeNameStyle(),
